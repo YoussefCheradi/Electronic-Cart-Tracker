@@ -260,44 +260,34 @@ class _Reparation_ModuleTableState extends State<Reparation_ModuleTable> {
               fit: BoxFit.cover, // Ajustez la façon dont l'image s'adapte
             ),
             SizedBox(height: 20,),
-            Row(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 20.0,horizontal: 300), // Ajouter un peu d'espacement vertical
-                  child: LayoutBuilder(
-                    builder: (context, constraints) {
-                      double screenWidth = MediaQuery.of(context).size.width;
-                      double textFieldWidth = screenWidth * 0.2; // Ajuster la largeur en fonction de l'écran
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 20.0,horizontal: 300), // Ajouter un peu d'espacement vertical
+              child: LayoutBuilder(
+                builder: (context, constraints) {
+                  double screenWidth = MediaQuery.of(context).size.width;
+                  double textFieldWidth = screenWidth * 0.2; // Ajuster la largeur en fonction de l'écran
 
-                      return Row(
-                        children: [
-                          Center(
-                            child: Container(
-                              width: textFieldWidth, // Appliquer la largeur calculée ici
-                              child: TextField(
-                                decoration: InputDecoration(
-                                  labelText: 'Rechercher',
-                                  prefixIcon: Icon(Icons.search),
-                                  border: OutlineInputBorder(
-                                    borderRadius: BorderRadius.circular(30.0),
-                                  ),
-                                ),
-                                onChanged: (value) {
-                                  _searchText = value;
-                                  _filterData(_searchText);
-                                },
-                              ),
-                            ),
+                  return Center(
+                    child: Container(
+                      width: textFieldWidth, // Appliquer la largeur calculée ici
+                      child: TextField(
+                        decoration: InputDecoration(
+                          labelText: 'Rechercher',
+                          prefixIcon: Icon(Icons.search),
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(30.0),
                           ),
-                        ],
-                      );
-
-                    },
-                  ),
-                ),
-              ],
+                        ),
+                        onChanged: (value) {
+                          _searchText = value;
+                          _filterData(_searchText);
+                        },
+                      ),
+                    ),
+                  );
+                },
+              ),
             ),
-
             SizedBox(height: 40),
             Padding(
               padding: const EdgeInsets.only(right: 90,left: 60),

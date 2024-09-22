@@ -24,7 +24,7 @@ app.add_middleware(
 )
 
 # Chemin du fichier Excel sur votre PC
-EXCEL_FILE_PATH = '/home/youssef/Téléchargements/Gestion.xlsm'  # Remplacez par le chemin réel
+EXCEL_FILE_PATH = 'Gestion.xlsm'  # Remplacez par le chemin réel
 
 # Fonction pour lire les données de la feuille de calcul spécifiée depuis le fichier Excel
 def read_excel_data(sheet_name: str):

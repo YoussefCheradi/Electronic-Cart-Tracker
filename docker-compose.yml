@@ -1,0 +1,14 @@
+services:
+  python-app:
+    build:
+      context: ./python
+    ports:
+      - "8000:8000"
+    container_name: python_app
+
+  flutter-web-app:
+    build:
+      context: ./oncf_flutter/RCCDS-mobil-application-main
+    ports:
+      - "8080:8080"
+    container_name: flutter_web_app

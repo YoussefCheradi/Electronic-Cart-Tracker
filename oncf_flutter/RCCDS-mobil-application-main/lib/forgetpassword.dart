@@ -139,14 +139,14 @@ class forgetscreen extends State<forget> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 690,left: 780),
+              padding: const EdgeInsets.only(top: 690,left: 770),
               child: ElevatedButton(
                   onPressed: (){
                     passwordReset(emailController.text.trim());
                   },
                   style: ButtonStyle(
                     padding: MaterialStateProperty.all<EdgeInsetsGeometry>(
-                      EdgeInsets.symmetric(horizontal: 60, vertical: 25),
+                      EdgeInsets.symmetric(horizontal: 65, vertical: 25),
                     ),
                     backgroundColor: MaterialStateProperty.all<Color>(Colors.black),
                     shape: MaterialStateProperty.all<RoundedRectangleBorder>(
