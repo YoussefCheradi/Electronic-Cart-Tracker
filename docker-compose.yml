@@ -8,7 +8,7 @@ services:
 
   flutter-web-app:
     build:
-      context: ./oncf_flutter/RCCDS-mobil-application-main
+      context: ./oncf_flutter/ONCF
     ports:
-      - "8080:8080"
+      - "9090:8080"
     container_name: flutter_web_app
